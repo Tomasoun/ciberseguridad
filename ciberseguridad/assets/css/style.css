@@ -1,0 +1,154 @@
+* {
+  font-family: 'WDXL Lubrifont TC', sans-serif;
+}
+
+body {
+  background-image: url("https://eadn-wc05-12656364.nxedge.io/wp-content/uploads/2021/12/img_0192.png");
+  background-size: cover;        
+  background-position: center;   /* Centra la imagen */
+  background-repeat: no-repeat;  /* Evita que se repita */
+  background-color: #f8f9fa;
+  font-family: 'WDXL Lubrifont TC', sans-serif;
+
+}
+
+.wdxl-lubrifont-tc-regular {
+  font-family: "WDXL Lubrifont TC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+nav {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+.nav-pills .nav-link.active {
+  background-color: #444950e0; /* azul Bootstrap */
+  color: #f1ecec !important;
+  border-radius: 0.375rem;
+}
+main {
+  margin-top: 70px; /* Ajustá según la altura de tu barra */
+}
+
+.fondo {
+  position: relative;
+  background-image: url('img/img_0192.png');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Oscurece el fondo */
+  z-index: 1;
+}
+
+.contenido {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 2rem 0;
+}
+
+header {
+  background-color: #020101;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 20px; /* Espacio que se verá entre el top del navegador y la barra */
+  width: 100%;
+  z-index: 1030;
+}
+
+#welcome-message {
+  color: #f8f9fa;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+  font-size: 3rem;
+  font-weight: bold;
+
+}
+header .nav-link {
+  color: #999ba0e5;
+  margin: 0 0.4rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+header .nav-link:hover {
+    color: #181616c0;
+  background-color: #3d4046ab;
+  border-radius: 5px;
+  text-decoration: none;
+
+}
+
+header .nav-link.active {
+  color: #fffefbce;
+  border-bottom: 2px solid #e9e6dd38;
+  background-color: #4f5155;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: none;
+}
+
+.card-header {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* === Enlaces dentro de listas === */
+.list-group-item a {
+  text-decoration: none;
+  color: #4f5155;
+}
+
+.list-group-item a:hover {
+  text-decoration: underline;
+}
+
+/* === Alerta de contacto === */
+.alert-info {
+  background-color: #e0f0ff;
+  border-left: 5px solid #f9fafc;
+  font-size: 1.1rem;
+}
+#contact-info {
+  color: #4f5155;
+  font-weight: bold;
+  background-color: aliceblue;
+}
+
+/* === Responsive extra (opcional) === */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .card-header {
+    font-size: 1rem;
+  }
+
+  .alert-info {
+    font-size: 1rem;
+  }
+}

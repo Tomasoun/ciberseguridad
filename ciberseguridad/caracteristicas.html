@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Características - Ciberseguridad</title>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .card:hover {
+      transform: scale(1.01);
+      transition: transform 0.2s;
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+
+  <header class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top border-bottom">
+    <div class="container-fluid px-4 d-flex align-items-center justify-content-between">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="assets/img/logo.png" alt="Logo" width="30" height="30" class="me-2">
+        <span class="fs-4 text-dark">CIBERSEGURIDAD</span>
+      </a>
+      <ul class="nav">
+        <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+        <li class="nav-item"><a href="caracteristicas.html" class="nav-link active">Características</a></li>
+        <li class="nav-item"><a href="soluciones.html" class="nav-link">Soluciones</a></li>
+        <li class="nav-item"><a href="faqs.html" class="nav-link">FAQs</a></li>
+        <li class="nav-item"><a href="acerca.html" class="nav-link">Acerca de</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container" style="margin-top: 100px; color: azure;">
+<body>
+
+<div class="container mt-5">
+  <h1 class="mb-4 display-2 text-white">Amenazas Cibernéticas Comunes</h1>
+
+  <!-- Phishing -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Phishing</h2>
+      <p class="card-text">Engaño mediante correos o mensajes falsos para robar datos personales o financieros.</p>
+      <div class="accordion" id="accordionPhishing">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingPhishing">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhishing">
+              Estafa
+            </button>
+          </h2>
+          <div id="collapsePhishing" class="accordion-collapse collapse" data-bs-parent="#accordionPhishing">
+            <div class="accordion-body">
+              En 2020, una campaña masiva simuló correos de la OMS durante la pandemia para robar credenciales.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ransomware -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Ransomware</h2>
+      <p class="card-text">Secuestro de archivos personales a cambio de un rescate, usualmente en criptomonedas.</p>
+      <div class="accordion" id="accordionRansomware">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingRansomware">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRansomware">
+              Extorsión
+            </button>
+          </h2>
+          <div id="collapseRansomware" class="accordion-collapse collapse" data-bs-parent="#accordionRansomware">
+            <div class="accordion-body">
+              El ataque de WannaCry en 2017 afectó a hospitales, empresas y gobiernos en más de 150 países.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Malware -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Malware</h2>
+      <p class="card-text">Programas maliciosos diseñados para espiar, robar o dañar dispositivos.</p>
+      <div class="accordion" id="accordionMalware">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingMalware">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMalware">
+              Virus
+            </button>
+          </h2>
+          <div id="collapseMalware" class="accordion-collapse collapse" data-bs-parent="#accordionMalware">
+            <div class="accordion-body">
+              El troyano Emotet infectó millones de sistemas, robando contraseñas y difundiendo más malware.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
