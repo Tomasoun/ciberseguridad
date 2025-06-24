@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ciberseguridad</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="la.jpg" alt="Los Angeles" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="chicago.jpg" alt="Chicago" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="ny.jpg" alt="New York" class="d-block w-100">
+    </div>
+  </div>
+
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<body class="bg-light">
+  <div class="fondo">
+    <div class="overlay">
+      <div class="contenido container-fluid px-0">
+        <header class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm bg-light border-bottom ">
+          <div class="container-fluid px-4 d-flex align-items-center justify-content-between">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+              <img src="assets/img/logo.png" alt="Logo" width="30" height="30" class="me-2">
+              <span class="fs-4 text-dark">Consejos de Seguridad</span>
+            </a>
+      <ul class="nav">
+        <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+        <li class="nav-item"><a href="caracteristicas.html" class="nav-link">Características</a></li>
+        <li class="nav-item"><a href="soluciones.html" class="nav-link active">Soluciones</a></li>
+        <li class="nav-item"><a href="faqs.html" class="nav-link">FAQs</a></li>
+        <li class="nav-item"><a href="acerca.html" class="nav-link">Acerca de</a></li>
+      </ul>
+          </div>
+        </header>
+
+<section class="container my-5">
+  <h2 class="mb-4 text"> Buenas prácticas para protegerse en línea</h2>
+  <ul class="list-group">
+    <li class="list-group-item">🔐 Usá contraseñas fuertes y únicas para cada cuenta.</li>
+    <li class="list-group-item">📲 Activá la autenticación en dos pasos siempre que sea posible.</li>
+    <li class="list-group-item">🧼 Mantené tu software y antivirus actualizados.</li>
+    <li class="list-group-item">🚫 No hagas clic en enlaces sospechosos ni descargues archivos de fuentes desconocidas.</li>
+    <li class="list-group-item">🌐 Verificá que los sitios web usen HTTPS antes de ingresar datos personales.</li>
+    <li class="list-group-item">📁 Realizá copias de seguridad periódicas de tu información.</li>
+  </ul>
+</section>
+<section class="container my-5">
+  <h2 class="mb-4">📩 Contactanos</h2>
+  <form id="contactoForm">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="nombre" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Correo electrónico</label>
+      <input type="email" class="form-control" id="email" required>
+    </div>
+    <div class="mb-3">
+      <label for="mensaje" class="form-label">Mensaje</label>
+      <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-dark">Enviar</button>
+  </form>
+</section>
+
+<script>
+  document.getElementById("contactoForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const nombre = document.getElementById("nombre").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const mensaje = document.getElementById("mensaje").value.trim();
+
+    if (!nombre || !email || !mensaje) {
+      alert("Por favor, completá todos los campos.");
+      return;
+    }
+
+    if (!email.includes("@")) {
+      alert("Ingresá un correo electrónico válido.");
+      return;
+    }
+
+    alert("¡Gracias por contactarnos, " + nombre + "!");
+    this.reset();
+  });
+</script>
+<!-- Botón para abrir el modal -->
+<div class="text-center my-4">
+  <button class="btn btn-white" data-bs-toggle="modal" data-bs-target="#testModal">
+    🧠 Realizar test de seguridad
+  </button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="testModal" tabindex="-1" aria-labelledby="testModalLabel" aria-hidden="true">
+  <div class="modal fade" id="testModal" tabindex="-1" aria-labelledby="testModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="testModalLabel">Test de Seguridad</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>¿Estás seguro de que deseas realizar el test de seguridad?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Aceptar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="assets/js/script.js"></script>
+</body>
+ 
