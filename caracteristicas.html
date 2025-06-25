@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,6 +15,7 @@
     body {
       background-color: #f8f9fa;
     }
+
     .card:hover {
       transform: scale(1.01);
       transition: transform 0.2s;
@@ -39,112 +41,161 @@
     </div>
   </header>
 
-  <main class="container" style="margin-top: 100px; color: azure;">
-<body>
-  <!-- Carousel -->
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-  <!-- Indicators/dots -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-  </div>
-
-  <!-- The slideshow/carousel -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="assets/img/descarga (1).png" alt="Los Angeles" class="d-block w-100">
+  <main class="container" style="margin-top: 100px; color: rgba(240, 255, 255, 0.329);">
+    <div class="container mt-5">
+      <section class="bg-dark py-1 text-center">
+        <h1 id="consola" class="display-2 text-white mb-0">Amenazas Cibernéticas</h1>
+      </section>
     </div>
-    <div class="carousel-item">
-      <img src="assets/img/descarga.png" alt="Chicago" class="d-block w-100">
-    </div>
-    <div class="carousel-item">
-      <img src="assets/img/carrusel3.png" alt="New York" class="d-block w-100">
-    </div>
-  </div>
 
-  <!-- Left and right controls/icons -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
-<div class="container mt-5">
-  <h1 class="mb-4 display-2 text-white">Amenazas Cibernéticas Comunes</h1>
 
-<div class="d-flex justify-content-center my-4">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_sVObRVfoms?si=RmHlm8J_jZ-ruGkH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
-  <!-- Phishing -->
-  <div class="card mb-4">
-    <div class="card-body">
-      <h2 class="card-title">Phishing</h2>
-      <p class="card-text">Engaño mediante correos o mensajes falsos para robar datos personales o financieros.</p>
-      <div class="accordion" id="accordionPhishing">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingPhishing">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePhishing">
-              Estafa
-            </button>
-          </h2>
-          <div id="collapsePhishing" class="accordion-collapse collapse" data-bs-parent="#accordionPhishing">
-            <div class="accordion-body">
-              En 2020, una campaña masiva simuló correos de la OMS durante la pandemia para robar credenciales.
+    <body>
+      <!-- Carousel -->
+      <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+        <!-- HTML -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/img/carrusel3.jpeg" alt="Los Angeles" class="d-block w-100" alt="Imagen 1"
+              class="d-block w-100 imagen-carrusel">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/carrusel4.jpeg" alt="Imagen 2" class="d-block w-100 imagen-carrusel">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/carrusel3.png" alt="Imagen 3" class="d-block w-100 imagen-carrusel">
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Left and right controls/icons -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+      </div>
+      <div class="container my-5">
+        <h2 class="text-start mb-4 text-white">Tipos de Amenazas Cibernéticas</h2>
+
+
+
+        <!-- Phishing -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h2 class="card-title">Phishing</h2>
+            <p class="card-text">Engaño mediante correos o mensajes falsos para robar datos personales o financieros.
+            </p>
+            <div class="accordion" id="accordionPhishing">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingPhishing">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsePhishing">
+                    Estafa
+                  </button>
+                </h2>
+                <div id="collapsePhishing" class="accordion-collapse collapse" data-bs-parent="#accordionPhishing">
+                  <div class="accordion-body">
+                    En 2020, una campaña masiva simuló correos de la OMS durante la pandemia para robar credenciales.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Ransomware -->
-  <div class="card mb-4">
-    <div class="card-body">
-      <h2 class="card-title">Ransomware</h2>
-      <p class="card-text">Secuestro de archivos personales a cambio de un rescate, usualmente en criptomonedas.</p>
-      <div class="accordion" id="accordionRansomware">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingRansomware">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRansomware">
-              Extorsión
-            </button>
-          </h2>
-          <div id="collapseRansomware" class="accordion-collapse collapse" data-bs-parent="#accordionRansomware">
-            <div class="accordion-body">
-              El ataque de WannaCry en 2017 afectó a hospitales, empresas y gobiernos en más de 150 países.
+        <!-- Ransomware -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h2 class="card-title">Ransomware</h2>
+            <p class="card-text">Secuestro de archivos personales a cambio de un rescate, usualmente en criptomonedas.
+            </p>
+            <div class="accordion" id="accordionRansomware">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingRansomware">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseRansomware">
+                    Extorsión
+                  </button>
+                </h2>
+                <div id="collapseRansomware" class="accordion-collapse collapse" data-bs-parent="#accordionRansomware">
+                  <div class="accordion-body">
+                    El ataque de WannaCry en 2017 afectó a hospitales, empresas y gobiernos en más de 150 países.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Malware -->
-  <div class="card mb-4">
-    <div class="card-body">
-      <h2 class="card-title">Malware</h2>
-      <p class="card-text">Programas maliciosos diseñados para espiar, robar o dañar dispositivos.</p>
-      <div class="accordion" id="accordionMalware">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingMalware">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMalware">
-              Virus
-            </button>
-          </h2>
-          <div id="collapseMalware" class="accordion-collapse collapse" data-bs-parent="#accordionMalware">
-            <div class="accordion-body">
-              El troyano Emotet infectó millones de sistemas, robando contraseñas y difundiendo más malware.
+        <!-- Malware -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h2 class="card-title">Malware</h2>
+            <p class="card-text">Programas maliciosos diseñados para espiar, robar o dañar dispositivos.</p>
+            <div class="accordion" id="accordionMalware">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingMalware">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseMalware">
+                    Virus
+                  </button>
+                </h2>
+                <div id="collapseMalware" class="accordion-collapse collapse" data-bs-parent="#accordionMalware">
+                  <div class="accordion-body">
+                    El troyano Emotet infectó millones de sistemas, robando contraseñas y difundiendo más malware.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+        <div class="d-flex justify-content-center my-4">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/_sVObRVfoms?si=RmHlm8J_jZ-ruGkH"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <script>
+          const mensaje = "Amenazas Cibernéticas";
+          const consola = document.getElementById("consola");
+          let i = 0;
+          let borrando = false;
 
+          function efectoConsola() {
+            if (!borrando && i <= mensaje.length) {
+              consola.textContent = mensaje.substring(0, i) + "█";
+              i++;
+              setTimeout(efectoConsola, 100);
+            } else if (borrando && i >= 0) {
+              consola.textContent = mensaje.substring(0, i) + "█";
+              i--;
+              setTimeout(efectoConsola, 100);
+            }
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/script.js"></script>
-</body>
+            if (i > mensaje.length) {
+              borrando = true;
+              setTimeout(efectoConsola, 1000);
+            }
+
+            if (borrando && i === 0) {
+              borrando = false;
+              setTimeout(efectoConsola, 500);
+            }
+          }
+
+          window.addEventListener("load", efectoConsola);
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/script.js"></script>
+    </body>
+
 </html>

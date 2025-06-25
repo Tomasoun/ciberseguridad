@@ -24,6 +24,36 @@ document.addEventListener("DOMContentLoaded", () => {
   mostrar();
 });
 
+const mensaje = "Amenazas Cibernéticas Comunes";
+const consola = document.getElementById("consola");
+
+let i = 0;
+let borrando = false;
+
+function efectoConsola() {
+  if (!borrando && i <= mensaje.length) {
+    consola.textContent = mensaje.substring(0, i) + "█";
+    i++;
+    setTimeout(efectoConsola, 100);
+  } else if (borrando && i >= 0) {
+    consola.textContent = mensaje.substring(0, i) + "█";
+    i--;
+    setTimeout(efectoConsola, 100);
+  }
+
+  if (i > mensaje.length) {
+    borrando = true;
+    setTimeout(efectoConsola, 1000); // pausa antes de borrar
+  }
+
+  if (borrando && i === 0) {
+    borrando = false;
+    setTimeout(efectoConsola, 500); // pausa antes de volver a escribir
+  }
+}
+
+window.addEventListener("load", efectoConsola);
+
 // Validación del formulario de contacto
 document.addEventListener("DOMContentLoaded", () => {
   const contactoForm = document.getElementById("contactoForm");

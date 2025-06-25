@@ -10,6 +10,213 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    /* Estilos del modal personalizado de resultado */
+    #modalResultado {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-contenido {
+      background-color: #fff;
+      margin: 15% auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 400px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .cerrar {
+      float: right;
+      font-size: 24px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+  <header class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm bg-light border-bottom">
+    <div class="container-fluid px-4 d-flex align-items-center justify-content-between">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="assets/img/logo.png" alt="Logo" width="30" height="30" class="me-2">
+        <span class="fs-4 text-dark">Consejos de Seguridad</span>
+      </a>
+      <ul class="nav">
+        <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+        <li class="nav-item"><a href="caracteristicas.html" class="nav-link">Características</a></li>
+        <li class="nav-item"><a href="soluciones.html" class="nav-link active">Soluciones</a></li>
+        <li class="nav-item"><a href="faqs.html" class="nav-link">FAQs</a></li>
+        <li class="nav-item"><a href="acerca.html" class="nav-link">Acerca de</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container my-5 pt-5">
+    <!-- Botón que abre el test -->
+    <div class="text-center my-4">
+      <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#testModal">
+        🧠 Realizar test de seguridad
+      </button>
+    </div>
+  </main>
+
+  <!-- Modal del test -->
+  <div class="modal fade" id="testModal" tabindex="-1" aria-labelledby="testModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="testForm">
+          <div class="modal-header">
+            <h5 class="modal-title" id="testModalLabel">Test de Seguridad</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="q1" class="form-label">¿Cuál es una buena práctica de contraseña?</label>
+              <select id="q1" class="form-select">
+                <option value="">Elegí una opción</option>
+                <option value="a">Usar la misma para todo</option>
+                <option value="b">Anotarla en un post-it</option>
+                <option value="c">Una contraseña larga y única</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="q2" class="form-label">¿Qué tecnología mejora la seguridad al iniciar sesión?</label>
+              <select id="q2" class="form-select">
+                <option value="">Elegí una opción</option>
+                <option value="a">Modo incógnito</option>
+                <option value="b">Autenticación en dos pasos</option>
+                <option value="c">Desactivar antivirus</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal personalizado del resultado -->
+  <div id="modalResultado">
+    <div class="modal-contenido">
+      <span class="cerrar">&times;</span>
+      <p id="resultadoTexto"></p>
+    </div>
+  </div>
+
+        <section class="container my-5">
+          <h2 class="mb-4 text-white"> Buenas prácticas para protegerse en línea</h2>
+          <ul class="list-group">
+            <li class="list-group-item">🔐 Usá contraseñas fuertes y únicas para cada cuenta.</li>
+            <li class="list-group-item">📲 Activá la autenticación en dos pasos siempre que sea posible.</li>
+            <li class="list-group-item">🧼 Mantené tu software y antivirus actualizados.</li>
+            <li class="list-group-item">🚫 No hagas clic en enlaces sospechosos ni descargues archivos de fuentes
+              desconocidas.</li>
+            <li class="list-group-item">🌐 Verificá que los sitios web usen HTTPS antes de ingresar datos personales.
+            </li>
+            <li class="list-group-item">📁 Realizá copias de seguridad periódicas de tu información.</li>
+          </ul>
+        </section>
+        <section class="container my-5">
+          <h2 class="mb-4 text-white">Contactanos</h2>
+          <form id="contactoForm">
+            <div class="mb-3 text-white">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="mb-3 text-white">
+              <label for="email" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3 text-white">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark">Enviar</button>
+          </form>
+        </section>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const testForm = document.getElementById("testForm");
+
+    if (testForm) {
+      testForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const r1 = document.getElementById("q1").value;
+        const r2 = document.getElementById("q2").value;
+        let score = 0;
+
+        if (r1 === "c") score++;
+        if (r2 === "b") score++;
+
+        const modalResultado = document.getElementById("modalResultado");
+        const resultadoTexto = document.getElementById("resultadoTexto");
+
+        // Mensaje según el puntaje
+        if (score === 2) {
+          resultadoTexto.textContent = "✅ ¡Excelente! Tenés buenos hábitos de seguridad.";
+          resultadoTexto.className = "text-success";
+        } else if (score === 1) {
+          resultadoTexto.textContent = "⚠️ Bien, pero podés mejorar.";
+          resultadoTexto.className = "text-warning";
+        } else {
+          resultadoTexto.textContent = "❌ Cuidado, revisá tus prácticas de seguridad.";
+          resultadoTexto.className = "text-danger";
+        }
+
+        // Mostrar modal de resultado
+        modalResultado.style.display = "block";
+
+        // Cerrar el modal con la X
+        document.querySelector(".cerrar").onclick = () => {
+          modalResultado.style.display = "none";
+        };
+
+        // Cerrar si se hace clic afuera del contenido
+        window.onclick = (e) => {
+          if (e.target === modalResultado) {
+            modalResultado.style.display = "none";
+          }
+        };
+      });
+    }
+  </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ciberseguridad</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 
 <body class="bg-light">
@@ -20,98 +227,104 @@
           <div class="container-fluid px-4 d-flex align-items-center justify-content-between">
             <a class="navbar-brand d-flex align-items-center" href="#">
               <img src="assets/img/logo.png" alt="Logo" width="30" height="30" class="me-2">
-              <span class="fs-4 text-dark">Consejos de Seguridad</span>
+              <span class="fs-4 text-dark ">Consejos de Seguridad</span>
             </a>
-      <ul class="nav">
-        <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
-        <li class="nav-item"><a href="caracteristicas.html" class="nav-link">Características</a></li>
-        <li class="nav-item"><a href="soluciones.html" class="nav-link active">Soluciones</a></li>
-        <li class="nav-item"><a href="faqs.html" class="nav-link">FAQs</a></li>
-        <li class="nav-item"><a href="acerca.html" class="nav-link">Acerca de</a></li>
-      </ul>
+            <ul class="nav">
+              <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+              <li class="nav-item"><a href="caracteristicas.html" class="nav-link">Características</a></li>
+              <li class="nav-item"><a href="soluciones.html" class="nav-link active">Soluciones</a></li>
+              <li class="nav-item"><a href="faqs.html" class="nav-link">FAQs</a></li>
+              <li class="nav-item"><a href="acerca.html" class="nav-link">Acerca de</a></li>
+            </ul>
           </div>
         </header>
 
 
 
-<section class="container my-5">
-  <h2 class="mb-4 text"> Buenas prácticas para protegerse en línea</h2>
-  <ul class="list-group">
-    <li class="list-group-item">🔐 Usá contraseñas fuertes y únicas para cada cuenta.</li>
-    <li class="list-group-item">📲 Activá la autenticación en dos pasos siempre que sea posible.</li>
-    <li class="list-group-item">🧼 Mantené tu software y antivirus actualizados.</li>
-    <li class="list-group-item">🚫 No hagas clic en enlaces sospechosos ni descargues archivos de fuentes desconocidas.</li>
-    <li class="list-group-item">🌐 Verificá que los sitios web usen HTTPS antes de ingresar datos personales.</li>
-    <li class="list-group-item">📁 Realizá copias de seguridad periódicas de tu información.</li>
-  </ul>
-</section>
-<section class="container my-5">
-  <h2 class="mb-4">📩 Contactanos</h2>
-  <form id="contactoForm">
-    <div class="mb-3">
-      <label for="nombre" class="form-label">Nombre</label>
-      <input type="text" class="form-control" id="nombre" required>
-    </div>
-    <div class="mb-3">
-      <label for="email" class="form-label">Correo electrónico</label>
-      <input type="email" class="form-control" id="email" required>
-    </div>
-    <div class="mb-3">
-      <label for="mensaje" class="form-label">Mensaje</label>
-      <textarea class="form-control" id="mensaje" rows="4" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-dark">Enviar</button>
-  </form>
-</section>
+        <section class="container my-5">
+          <h2 class="mb-4 text-white"> Buenas prácticas para protegerse en línea</h2>
+          <ul class="list-group">
+            <li class="list-group-item">🔐 Usá contraseñas fuertes y únicas para cada cuenta.</li>
+            <li class="list-group-item">📲 Activá la autenticación en dos pasos siempre que sea posible.</li>
+            <li class="list-group-item">🧼 Mantené tu software y antivirus actualizados.</li>
+            <li class="list-group-item">🚫 No hagas clic en enlaces sospechosos ni descargues archivos de fuentes
+              desconocidas.</li>
+            <li class="list-group-item">🌐 Verificá que los sitios web usen HTTPS antes de ingresar datos personales.
+            </li>
+            <li class="list-group-item">📁 Realizá copias de seguridad periódicas de tu información.</li>
+          </ul>
+        </section>
+        <section class="container my-5">
+          <h2 class="mb-4">📩 Contactanos</h2>
+          <form id="contactoForm">
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark">Enviar</button>
+          </form>
+        </section>
 
-<script>
-  document.getElementById("contactoForm").addEventListener("submit", function (e) {
-    e.preventDefault();
-    const nombre = document.getElementById("nombre").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const mensaje = document.getElementById("mensaje").value.trim();
+        <script>
+          document.getElementById("contactoForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const nombre = document.getElementById("nombre").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const mensaje = document.getElementById("mensaje").value.trim();
 
-    if (!nombre || !email || !mensaje) {
-      alert("Por favor, completá todos los campos.");
-      return;
-    }
+            if (!nombre || !email || !mensaje) {
+              alert("Por favor, completá todos los campos.");
+              return;
+            }
 
-    if (!email.includes("@")) {
-      alert("Ingresá un correo electrónico válido.");
-      return;
-    }
+            if (!email.includes("@")) {
+              alert("Ingresá un correo electrónico válido.");
+              return;
+            }
 
-    alert("¡Gracias por contactarnos, " + nombre + "!");
-    this.reset();
-  });
-</script>
-<!-- Botón para abrir el modal -->
-<div class="text-center my-4">
-  <button class="btn btn-white" data-bs-toggle="modal" data-bs-target="#testModal">
-    🧠 Realizar test de seguridad
-  </button>
-</div>
+            alert("¡Gracias por contactarnos, " + nombre + "!");
+            this.reset();
+          });
+        </script>
+        Botón para abrir el modal -->
+        <!-- <div class="text-center my-4">
+          <button class="btn btn-white" data-bs-toggle="modal" data-bs-target="#testModal">
+            🧠 Realizar test de seguridad
+          </button>
+        </div> -->
 
-<!-- Modal -->
-<div class="modal fade" id="testModal" tabindex="-1" aria-labelledby="testModalLabel" aria-hidden="true">
-  <div class="modal fade" id="testModal" tabindex="-1" aria-labelledby="testModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="testModalLabel">Test de Seguridad</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>¿Estás seguro de que deseas realizar el test de seguridad?</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary">Aceptar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-<script src="assets/js/script.js"></script>
-</body>
- 
+        <!-- Modal -->
+        <!-- <div class="modal fade" id="testModal" tabindex="-1" aria-labelledby="testModalLabel" aria-hidden="true">
+          <div class="modal fade" id="testModal" tabindex="-1" aria-labelledby="testModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="testModalLabel">Test de Seguridad</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>¿Estás seguro de que deseas realizar el test de seguridad?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-primary">Aceptar</button>
+                </div>
+                <div id="modalResultado" class="modal">
+                  <div class="modal-contenido">
+                    <span class="cerrar">&times;</span>
+                    <p id="resultadoTexto"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <script src="assets/js/script.js"></script>
+</body> -->

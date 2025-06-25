@@ -100,6 +100,22 @@ header .nav-link.active {
   background-color: #4f5155;
 }
 
+.lead.justificado {
+  text-align: justify;
+}
+
+#consola {
+  font-family: 'Courier New', monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid #42eca5;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #fff; }
+}
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -136,6 +152,31 @@ header .nav-link.active {
   color: #4f5155;
   font-weight: bold;
   background-color: aliceblue;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-contenido {
+  background-color: white;
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.cerrar {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 /* === Responsive extra (opcional) === */
